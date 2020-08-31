@@ -10,6 +10,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class calculadora extends JFrame {
 
@@ -52,87 +54,204 @@ public class calculadora extends JFrame {
 	public calculadora() {
 		setTitle("Calculadora");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 261, 273);
+		setBounds(100, 100, 320, 349);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		txtCalculos = new JTextField();
-		txtCalculos.setBounds(0, 0, 245, 49);
+		txtCalculos.setBounds(10, 0, 282, 59);
 		contentPane.add(txtCalculos);
 		txtCalculos.setColumns(10);
 		
 		JButton btn7 = new JButton("7");
-		btn7.setBounds(0, 49, 63, 49);
+		btn7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "7");
+			}
+		});
+		btn7.setBounds(10, 70, 63, 49);
 		contentPane.add(btn7);
 		
 		JButton btn4 = new JButton("4");
-		btn4.setBounds(0, 95, 63, 49);
+		btn4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "4");
+			}
+		});
+		btn4.setBounds(10, 130, 63, 49);
 		contentPane.add(btn4);
 		
 		btn1 = new JButton("1");
-		btn1.setBounds(0, 142, 63, 49);
+		btn1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "1");
+			}
+		});
+		btn1.setBounds(10, 190, 63, 49);
 		contentPane.add(btn1);
 		
 		btn0 = new JButton("0");
-		btn0.setBounds(0, 186, 63, 49);
+		btn0.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "0");
+			}
+		});
+		btn0.setBounds(10, 250, 63, 49);
 		contentPane.add(btn0);
 		
 		btn8 = new JButton("8");
+		btn8.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "8");
+			}
+		});
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btn8.setBounds(61, 49, 63, 49);
+		btn8.setBounds(83, 70, 63, 49);
 		contentPane.add(btn8);
 		
 		btn9 = new JButton("9");
-		btn9.setBounds(122, 49, 63, 49);
+		btn9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "9");
+			}
+		});
+		btn9.setBounds(156, 70, 63, 49);
 		contentPane.add(btn9);
 		
 		btn6 = new JButton("6");
+		btn6.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "6");
+			}
+		});
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btn6.setBounds(122, 95, 63, 49);
+		btn6.setBounds(156, 130, 63, 49);
 		contentPane.add(btn6);
 		
 		btn5 = new JButton("5");
-		btn5.setBounds(61, 95, 63, 49);
+		btn5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "5");
+			}
+		});
+		btn5.setBounds(83, 130, 63, 49);
 		contentPane.add(btn5);
 		
 		btn2 = new JButton("2");
-		btn2.setBounds(61, 142, 63, 49);
+		btn2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "2");
+			}
+		});
+		btn2.setBounds(83, 190, 63, 49);
 		contentPane.add(btn2);
 		
 		btnPonto = new JButton(".");
-		btnPonto.setBounds(61, 186, 63, 49);
+		btnPonto.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + ".");
+			}
+		});
+		btnPonto.setBounds(83, 250, 63, 49);
 		contentPane.add(btnPonto);
 		
 		btn3 = new JButton("3");
-		btn3.setBounds(122, 142, 63, 49);
+		btn3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "3");
+			}
+		});
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btn3.setBounds(156, 190, 63, 49);
 		contentPane.add(btn3);
 		
 		btnDivisao = new JButton("/");
-		btnDivisao.setBounds(122, 186, 63, 49);
+		btnDivisao.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "/");
+			}
+		});
+		btnDivisao.setBounds(156, 250, 63, 49);
 		contentPane.add(btnDivisao);
 		
 		btnSoma = new JButton("+");
-		btnSoma.setBounds(182, 49, 63, 49);
+		btnSoma.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "+");
+			}
+		});
+		btnSoma.setBounds(229, 70, 63, 49);
 		contentPane.add(btnSoma);
 		
 		btnSubstracao = new JButton("-");
-		btnSubstracao.setBounds(182, 95, 63, 49);
+		btnSubstracao.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "-");
+			}
+		});
+		btnSubstracao.setBounds(229, 130, 63, 49);
 		contentPane.add(btnSubstracao);
 		
 		btnMultiplicacao = new JButton("*");
-		btnMultiplicacao.setBounds(182, 142, 63, 49);
+		btnMultiplicacao.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "*");
+			}
+		});
+		btnMultiplicacao.setBounds(229, 190, 63, 49);
 		contentPane.add(btnMultiplicacao);
 		
 		btnIgual = new JButton("=");
-		btnIgual.setBounds(182, 186, 63, 49);
+		btnIgual.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String valor = txtCalculos.getText();
+				txtCalculos.setText(valor + "=");
+			}
+		});
+		btnIgual.setBounds(229, 250, 63, 49);
 		contentPane.add(btnIgual);
 	}
 }
